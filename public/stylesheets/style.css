@@ -1,0 +1,66 @@
+.projects-container, .owner {
+  display: flex;
+  flex-direction: row;
+}
+
+body {
+  background-color: #00000f;
+  margin-top: 100px;
+}
+
+.main-container {
+  width: 60vw;
+  margin-left: 20vw;
+  margin-right: 20vw;
+}
+
+.projects-container {
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.card-container {
+  width: calc( 100% / 3 - 20px);
+  height: 600px;
+  margin: 0 10px 10px 10px;
+}
+
+.image-container {
+  background-color: #00000f;
+}
+
+.image-box {
+  box-shadow: 1px 1px 10px 1px #919191;
+}
+
+.project-image {
+  width: 100%;
+  height: 470px;
+}
+
+.card-title-container {
+  margin: 15px 0 15px 0;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #0099ff;
+}
+
+.owner {
+  width: 100%;
+  align-items: center;
+}
+
+.user-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.user-name {
+  font-size: 1.3rem;
+  color: #838383;
+}

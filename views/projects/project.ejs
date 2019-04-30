@@ -1,0 +1,16 @@
+<div class="card-container">
+  <div class="card image-container">
+    <div class="card-img-top image-box">
+      <img src=<%= project.image_url %> class="project-image">
+    </div>
+    <div class="card-title-container">
+      <div class="title">
+        <%= project.name %>
+      </div>
+      <div class="owner">
+        <img src=<%= project.image_url %> class="user-image" >
+        <div class="user-name"><%= project.owner_id %></div>
+      </div>
+    </div>
+  </div>
+</div>
