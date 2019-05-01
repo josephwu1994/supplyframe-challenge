@@ -5,16 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SupplyFrame Challenge</title>
+    <script
+      src="https://code.jquery.com/jquery-3.4.0.min.js"
+      integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+      crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="/stylesheets/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
   <div class="main-container">
+    <div class="header">All Projects</div>
     <ul class="projects-container">
       <% projects.forEach( (project) => { %>
       <%- include('projects/project', {project: project} ) %>
       <% }) %>
     </ul>
+    <div class="nav-container">
+      <% if(pagination.page === 1) { %>
+          <a href="/projects?page=<%= pagination.page+1 %>">
+            <span> Next </span>
+            <i class="fas fa-angle-right"></i>
+          </a>
+      <% } else if(pagination.page > 1 ) { %>
+          <a href="/projects?page=<%= pagination.page-1 %>">
+            <i class="fas fa-angle-left"></i>
+            <span> Previous </span>
+          </a>
+          <a href="/projects?page=<%= pagination.page+1 %>">
+            <span> Next </span>
+            <i class="fas fa-angle-right"></i>
+          </a>
+      <% } %>
+    </div>
   </div>
+  <script>
+    const projects = <%-JSON.stringify(projects)%>;
+    const key = '<%=process.env.API_KEY%>';
+  </script>
+  <script type="text/javascript" src="frontend.js"></script>
 </body>
 </html>

@@ -1,15 +1,27 @@
 <div class="card-container">
   <div class="card image-container">
-    <div class="card-img-top image-box">
-      <img src=<%= project.image_url %> class="project-image">
+    <div class="card-img-top image-box" style="background-image: url(<%= project.image_url %>)">
+      <div class="user-detail" id=<%= project.id+'tooltip'%>>
+        <div class="user-top">
+          <div class="user-image <%= project.owner_id+'image'%>"></div>
+          <div class="user-bio <%= project.owner_id+'bio'%>" ></div>
+        </div>
+        <div class="user-bottom <%= project.owner_id+'stats'%>" >
+        </div>
+      </div>
+      <div class="project-data-container">
+        <i class="fas fa-eye">  <%= project.views%></i>
+        <i class="fas fa-user">  <%= project.followers%></i>
+        <i class="fas fa-skull">  <%= project.skulls%></i>
+      </div>
     </div>
     <div class="card-title-container">
       <div class="title">
         <%= project.name %>
       </div>
-      <div class="owner">
-        <img src=<%= project.image_url %> class="user-image" >
-        <div class="user-name"><%= project.owner_id %></div>
+      <div class="owner" id=<%= project.id%>>
+        <div class="owner-image <%= project.owner_id+'image'%>" ></div>
+        <div class="owner-name <%= project.owner_id %>"></div>
       </div>
     </div>
   </div>
