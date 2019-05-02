@@ -1,3 +1,5 @@
+const server = require('../server')
+
 module.exports = {
   before: (browser) => {
 		browser.maximizeWindow();
