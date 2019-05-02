@@ -16,7 +16,7 @@
     <div class="header">Projects</div>
     <ul class="projects-container">
       <% projects.forEach( (project) => { %>
-      <%- include('projects/project', {project: project} ) %>
+      <%- include('components/project', {project: project} ) %>
       <% }) %>
     </ul>
     <div class="nav-container">
