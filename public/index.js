@@ -4,6 +4,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
     if( index === 0 ) ownerIds += project.owner_id
     else ownerIds += `,${project.owner_id}`
   })
+  //fetch users' usernames and image url to display under corresponding porjects
   fetch(`http://api.hackaday.io/v1/users/batch?ids=${ownerIds}&api_key=${key}`)
   .then(res => res.json())
   .then(owners => {
@@ -32,6 +33,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
     console.error(error)
   })
  
+  //add hover event listener to show tooltip when hovering over the owner's image
   Object.values(document.getElementsByClassName('owner')).forEach(el => {
     el.addEventListener('mouseenter', (e) => {
       document.getElementById(`${e.target.id}tooltip`).style.opacity = 1;

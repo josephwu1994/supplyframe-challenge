@@ -27,8 +27,8 @@
   transition: opacity 1s;
 }
 
-.content .title-container .project-name, .content .title-container .description, .content .title-container .recommendation h3 {
-  text-shadow: 0px 3px 0px #707070, 0px 14px 10px rgba(0, 0, 0, 0.15), 0px 24px 2px rgba(0, 0, 0, 0.1), 0px 34px 30px rgba(0, 0, 0, 0.1);
+.content .title-container .project-name, .content .title-container .description span, .content .title-container .recommendation h3 {
+  text-shadow: 0px 3px 0px #474747, 0px 14px 10px rgba(0, 0, 0, 0.15), 0px 24px 2px rgba(0, 0, 0, 0.1), 0px 34px 30px rgba(0, 0, 0, 0.1);
 }
 
 .content .user-container .profile-image .username, .content .title-container .recommendation .suggestion .suggested-user h4, .content .title-container .recommendation .suggestion .suggested-project h4 {
@@ -91,6 +91,11 @@ body {
   color: white;
 }
 
+.content .user-container .profile-image .username:hover {
+  color: #8f8f8f;
+  cursor: pointer;
+}
+
 .content .title-container {
   align-items: center;
   justify-content: flex-start;
@@ -125,6 +130,11 @@ body {
   font-weight: 600;
 }
 
+.content .title-container .stats i span:hover {
+  color: gray;
+  cursor: pointer;
+}
+
 .content .title-container .project-name {
   width: 100%;
   height: auto;
@@ -147,9 +157,9 @@ body {
   padding-right: 30px;
   margin: 20px 0 20px 0;
   text-align: left;
-  font-size: 2em;
+  font-size: 1.7em;
   color: white;
-  font-weight: 400;
+  font-weight: 200;
   max-height: 40%;
   overflow: scroll;
 }
@@ -157,6 +167,7 @@ body {
 .content .title-container .description span {
   color: #0099ff;
   font-size: 1.2em;
+  font-weight: 200;
 }
 
 .content .title-container .recommendation {

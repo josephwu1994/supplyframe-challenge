@@ -60,6 +60,11 @@ ul .card-container .image-container .image-box {
   width: 100%;
   height: 470px;
   background-size: 100% 470px;
+  transition: background-size 1s;
+}
+
+ul .card-container .image-container .image-box:hover {
+  background-size: 110% 520px;
 }
 
 ul .card-container .image-container .image-box .user-detail {
@@ -169,9 +174,18 @@ ul .card-container .card-title-container .owner .owner-image {
   background-size: 40px 40px;
 }
 
+ul .card-container .card-title-container .owner .owner-image:hover {
+  cursor: pointer;
+}
+
 ul .card-container .card-title-container .owner .owner-name {
   font-size: 1.3rem;
   color: #838383;
+}
+
+ul .card-container .card-title-container .owner .owner-name:hover {
+  color: white;
+  cursor: pointer;
 }
 
 .nav-container {

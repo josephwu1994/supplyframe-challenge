@@ -1,4 +1,5 @@
 window.addEventListener('DOMContentLoaded', (e) => {
+  //fetch owner of the project to get username and profile picture
   fetch(`http://api.hackaday.io/v1/users/${project.owner_id}?api_key=${key}`)
   .then(res => res.json())
   .then(user => {
@@ -16,6 +17,8 @@ window.addEventListener('DOMContentLoaded', (e) => {
     document.getElementById('recommendation').style.opacity = 1
   },500)
   const tag = project.tags[0]
+  
+  //fetch 5 recommended users from the first tag
   fetch(`http://api.hackaday.io/v1/search/users?api_key=${key}&search_term=${tag}&per_page=5`)
   .then(res => res.json())
   .then(result => {
@@ -39,7 +42,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
       })
     }
   })
-
+  // fetch 5 recommended projects from the first tag
   fetch(`http://api.hackaday.io/v1/search/projects?api_key=${key}&search_term=${tag}&per_page=5`)
   .then(res => res.json())
   .then(result => {
