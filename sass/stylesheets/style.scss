@@ -14,6 +14,7 @@
 }
 
 $background: rgb(7, 7, 8);
+$primaryText: rgb(0, 153, 255);
 
 body {
   font-family: 'Gugi', cursive;
@@ -79,7 +80,7 @@ ul {
             @extend %flexrowcenter;
             height: auto;
             width: 100%;
-            padding: 10px 0 10px 0;
+            padding: 20px 0 10px 0;
 
             .user-image {
               box-shadow: 1px 1px 25px 1px white;
@@ -96,7 +97,7 @@ ul {
               padding: 10px 0 10px 10px;
 
               h4 {
-                color: rgb(0, 153, 255);
+                color: $primaryText;
                 font-weight: 600;
               }
               p {
@@ -130,14 +131,19 @@ ul {
           bottom: 10px;
           right: 0;
           height: 12%;
-          width: 50%;
+          width: 55%;
           background-color: rgb(27, 27, 27);
           color: rgb(109, 108, 108);
           font-size: 1.2em;
           
           i {
-            white-space: pre;
-            font-weight: 600;
+
+            span {
+              white-space: pre;
+              font-size: 1em;
+              font-family: 'ZCOOL KuaiLe', cursive;
+              font-weight: 600;
+            }
           }
         }
       }      
@@ -151,7 +157,7 @@ ul {
         max-width: 100%;
         font-size: 2.5rem;
         font-weight: 300;
-        color: rgb(0, 153, 255);
+        color: $primaryText;
         overflow-x: scroll;
         white-space: nowrap;
       }
@@ -204,7 +210,7 @@ ul {
       font-size: 3em;
     }
     &:hover {
-      color: rgb(0, 153, 255);
+      color: $primaryText;
       background: -webkit-gradient(linear, left top, left bottom, from(rgb(41, 41, 41)), to(rgb(0, 0, 0)));
     }
     &:active {

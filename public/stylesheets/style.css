@@ -79,7 +79,7 @@ ul .card-container .image-container .image-box .user-detail {
 ul .card-container .image-container .image-box .user-detail .user-top {
   height: auto;
   width: 100%;
-  padding: 10px 0 10px 0;
+  padding: 20px 0 10px 0;
 }
 
 ul .card-container .image-container .image-box .user-detail .user-top .user-image {
@@ -130,14 +130,16 @@ ul .card-container .image-container .image-box .project-data-container {
   bottom: 10px;
   right: 0;
   height: 12%;
-  width: 50%;
+  width: 55%;
   background-color: #1b1b1b;
   color: #6d6c6c;
   font-size: 1.2em;
 }
 
-ul .card-container .image-container .image-box .project-data-container i {
+ul .card-container .image-container .image-box .project-data-container i span {
   white-space: pre;
+  font-size: 1em;
+  font-family: 'ZCOOL KuaiLe', cursive;
   font-weight: 600;
 }
 

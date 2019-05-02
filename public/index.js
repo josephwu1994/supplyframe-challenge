@@ -1,6 +1,5 @@
 window.addEventListener('DOMContentLoaded', (e) => {
   let ownerIds = ''
-  console.log(key)
   projects.forEach((project, index) => {
     if( index === 0 ) ownerIds += project.owner_id
     else ownerIds += `,${project.owner_id}`
@@ -16,10 +15,10 @@ window.addEventListener('DOMContentLoaded', (e) => {
         el.style.backgroundImage = `url(${owner.image_url})`
       })
       Object.values(document.getElementsByClassName(`${owner.id}bio`)).forEach(el => {
-        el.innerHTML = `
-          <h4>${owner.username}</h4>
-          <p>${owner.who_am_i}</p>
-        `
+        el.innerHTML = owner.who_am_i.trim().length < 1 ? 
+        `<h4>${owner.username}</h4>` :
+        `<h4>${owner.username}</h4>
+          <p>${owner.who_am_i}</p>`
       })
       Object.values(document.getElementsByClassName(`${owner.id}stats`)).forEach(el => {
         el.innerHTML=`
@@ -28,6 +27,9 @@ window.addEventListener('DOMContentLoaded', (e) => {
         `
       })
     })
+  })
+  .catch(error => {
+    console.error(error)
   })
  
   Object.values(document.getElementsByClassName('owner')).forEach(el => {
