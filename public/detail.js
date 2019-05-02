@@ -65,7 +65,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
 })  
 
 const truncateText = (text) => {
-  const max = 23;
+  const max = 20;
   if(text === null) return 'no username';
   if(text.length > max) {
     return text.substr(0,max)+'...'

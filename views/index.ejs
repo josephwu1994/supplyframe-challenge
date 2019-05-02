@@ -21,16 +21,16 @@
     </ul>
     <div class="nav-container">
       <% if(pagination.page === 1) { %>
-          <a href="/projects?page=<%= pagination.page+1 %>">
+          <a id="next" href="/projects?page=<%= pagination.page+1 %>">
             <span> Next </span>
             <i class="fas fa-angle-right"></i>
           </a>
       <% } else if(pagination.page > 1 ) { %>
-          <a href="/projects?page=<%= pagination.page-1 %>">
+          <a id="previous" href="/projects?page=<%= pagination.page-1 %>">
             <i class="fas fa-angle-left"></i>
             <span> Previous </span>
           </a>
-          <a href="/projects?page=<%= pagination.page+1 %>">
+          <a id="next" href="/projects?page=<%= pagination.page+1 %>">
             <span> Next </span>
             <i class="fas fa-angle-right"></i>
           </a>
